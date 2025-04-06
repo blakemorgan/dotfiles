@@ -1,1 +1,3 @@
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHWJOEQttYucGhCGNwySycQTbGsHTsVVIrvHx9d7N7XV
+{{ range gitHubKeys "$GITHUB_USERNAME" -}}
+{{   .Key }}
+{{ end -}}
