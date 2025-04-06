@@ -5,7 +5,7 @@
 	process = git-lfs filter-process
 [user]
 	name = Blake Morgan
-	email = "bmorgan@whatnot.com"
+	email = {{ .email | quote }}
 	signingkey = 68136ABA8B109C231C0710A962DE4FF8A9F75FA3
 [commit]
 	gpgsign = true
@@ -14,16 +14,18 @@
 	autocrlf = input
 [alias]
 	chekcout = checkout
-  st = status
+	st = status
 [init]
 	defaultBranch = main
 [pull]
 	rebase = true
+{{- if eq .machineType = "work" }}
 [log]
 	mailmap = true
 [shortlog]
 	mailmap = true
 [mailmap]
 	file = ~/dev/scripts/mailmap
+{{- end }}	
 [advice]
-  detachedHead = false
+	detachedHead = false
