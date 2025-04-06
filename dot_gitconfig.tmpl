@@ -6,7 +6,7 @@
 [user]
 	name = Blake Morgan
 	email = {{ .email | quote }}
-	signingkey = 68136ABA8B109C231C0710A962DE4FF8A9F75FA3
+	signingkey = {{ if eq .machineType "work" }}68136ABA8B109C231C0710A962DE4FF8A9F75FA3{{ else }}9A1D63E46CE3BEB82BB26B452A496DFDBB36078B{{ end }}
 [commit]
 	gpgsign = true
 [core]
