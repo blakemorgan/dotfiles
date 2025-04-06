@@ -1,0 +1,29 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = Blake Morgan
+	email = "bmorgan@whatnot.com"
+	signingkey = 68136ABA8B109C231C0710A962DE4FF8A9F75FA3
+[commit]
+	gpgsign = true
+[core]
+	editor = vim
+	autocrlf = input
+[alias]
+	chekcout = checkout
+  st = status
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[log]
+	mailmap = true
+[shortlog]
+	mailmap = true
+[mailmap]
+	file = ~/dev/scripts/mailmap
+[advice]
+  detachedHead = false
