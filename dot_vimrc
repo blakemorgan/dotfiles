@@ -1,0 +1,18 @@
+set tabstop=4
+set softtabstop=4 
+set expandtab 
+set shiftwidth=2 
+set smarttab 
+set rtp+=/opt/homebrew/opt/fzf
+syntax on
+set cc=80,120
+hi ColorColumn ctermbg=darkgrey guibg=darkgrey
+set confirm
+set copyindent
+set expandtab
+set ignorecase
+set relativenumber
+set showmatch
+set smartindent
+set smarttab
+set number
