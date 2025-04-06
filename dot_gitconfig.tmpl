@@ -19,7 +19,7 @@
 	defaultBranch = main
 [pull]
 	rebase = true
-{{- if eq .machineType = "work" }}
+{{- if eq .machineType "work" }}
 [log]
 	mailmap = true
 [shortlog]
