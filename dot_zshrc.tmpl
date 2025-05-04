@@ -77,7 +77,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aliases asdf aws direnv emoji fzf gh gitfast gpg-agent kubectl nvm safe-paste ssh ssh-agent terraform z zsh-autosuggestions zsh-interactive-cd zsh-syntax-highlighting {{ if eq .chezmoi.os "darwin" }}brew keychain macos{{end}})
+plugins=(aliases asdf aws emoji fzf gh gitfast gpg-agent kubectl nvm safe-paste ssh ssh-agent terraform z zsh-autosuggestions zsh-interactive-cd zsh-syntax-highlighting {{ if eq .chezmoi.os "darwin" }}brew keychain macos{{end}})
 
 source $ZSH/oh-my-zsh.sh
 
