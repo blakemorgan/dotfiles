@@ -18,7 +18,8 @@
 [init]
 	defaultBranch = main
 [pull]
-	rebase = true
+	rebase = flase
+	ff = only
 {{- if eq .machineType "work" }}
 [log]
 	mailmap = true
