@@ -17,8 +17,6 @@ alias tf="terraform"
 alias tfp="terraform plan"
 alias k="kubectl"
 alias ll="ls -la --color"
-
-
 {{- if eq .chezmoi.os "darwin" }}
 # Homebrew
 export HOMEBREW_NO_ENV_HINTS=true
@@ -44,7 +42,6 @@ if command -v pyenv >/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
 # End pyenv
-
 {{- if eq .chezmoi.os "darwin" }}
 # Android
 if [ -d '/Applications/Android Studio.app' ]; then
@@ -71,3 +68,23 @@ export NVM_DIR="$HOME/.nvm"
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# claude
+alias claude="/Users/bmorgan/.claude/local/claude"
+
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+autoload -Uz compinit && compinit
+
+# zsh extensions
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Docker CLI
+fpath=(/Users/bmorgan/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+
+# pipx
+export PATH="$PATH:/Users/bmorgan/.local/bin"
