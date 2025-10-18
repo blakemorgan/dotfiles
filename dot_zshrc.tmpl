@@ -1,6 +1,6 @@
 eval "$(starship init zsh)"
 
-{{- if eq .chezmoi.os "darwin" -}}
+{{ if eq .chezmoi.os "darwin" -}}
 source ~/.zkbd/xterm-256color-apple-darwin25.0
 [[ -n ${key[Left]} ]] && bindkey "${key[Left]}" backward-char
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
