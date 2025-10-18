@@ -1,4 +1,5 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $machineType := promptStringOnce . "machineType" "Machine type" -}}
 
 [git]
     autoCommit = true
@@ -6,4 +7,4 @@
 
 [data]
     email = {{ $email | quote }}
-    machineType = "personal"
+    machineType = {{ $machineType | quote }}
