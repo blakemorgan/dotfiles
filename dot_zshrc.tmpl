@@ -82,8 +82,8 @@ fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 autoload -Uz compinit && compinit
 
 # zsh extensions
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source {{ if eq .chezmoi.os "linux" }}/home/linuxbrew/.linuxbrew{{else}}/opt/homebrew{{end}}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source {{ if eq .chezmoi.os "linux" }}/home/linuxbrew/.linuxbrew{{else}}/opt/homebrew{{end}}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Docker CLI
 fpath=(/Users/bmorgan/.docker/completions $fpath)
