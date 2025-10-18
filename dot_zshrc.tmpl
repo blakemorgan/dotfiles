@@ -18,10 +18,11 @@ alias tfp="terraform plan"
 alias k="kubectl"
 alias ll="ls -la --color"
 alias ghpr="gh pr create -a @me"
-{{- if eq .chezmoi.os "darwin" }}
+
 # Homebrew
 export HOMEBREW_NO_ENV_HINTS=true
 
+{{- if eq .chezmoi.os "darwin" }}
 if [ -d '/opt/homebrew/opt/ruby' ]; then
   # Add ruby
   export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
